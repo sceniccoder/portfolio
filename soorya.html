@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of M Soorya Narayan - Entrepreneur, Innovator, and Tech Enthusiast.">
+    <meta name="keywords" content="M Soorya Narayan, Portfolio, Entrepreneur, Innovator, Tech Enthusiast, Startup Founder">
+    <meta name="author" content="M Soorya Narayan">
+    <title>M Soorya Narayan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        p, a, li {
+            font-weight: 400;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: transparent; /* No background color */
+            backdrop-filter: blur(10px); /* Retain blur effect */
+        }
+        footer {
+            background-color: transparent; /* No background color */
+            backdrop-filter: blur(10px); /* Retain blur effect */
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+    <script>
+        // Dark/Light Mode Toggle
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const isDarkMode = htmlElement.classList.contains('dark');
+            if (isDarkMode) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Apply saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body class="bg-gradient-to-r from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-gray-800 dark:text-gray-200">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 hover-scale">Portfolio</h1>
+            <nav class="space-x-6">
+                <a href="#hero" class="text-gray-800 dark:text-gray-200 hover:underline">Home</a>
+                <a href="#about" class="text-gray-800 dark:text-gray-200 hover:underline">About</a>
+                <a href="#projects" class="text-gray-800 dark:text-gray-200 hover:underline">Projects</a>
+                <a href="#education" class="text-gray-800 dark:text-gray-200 hover:underline">Education</a>
+                <a href="#achievements" class="text-gray-800 dark:text-gray-200 hover:underline">Achievements</a>
+                <a href="#skills" class="text-gray-800 dark:text-gray-200 hover:underline">Skills</a>
+                <a href="#contact" class="text-gray-800 dark:text-gray-200 hover:underline">Contact</a>
+            </nav>
+            <button onclick="toggleTheme()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Toggle Theme</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center relative fade-in parallax" style="background-image: url('hero-bg.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10">
+            <h1 class="text-6xl font-bold text-white hover-scale">
+                <span id="typed"></span>
+            </h1>
+            <script>
+                var typed = new Typed("#typed", {
+                    strings: ["M Soorya Narayan"], // Only your name
+                    typeSpeed: 100,
+                    backSpeed: 50,
+                    loop: true,
+                });
+            </script>
+            <p class="text-2xl text-gray-300 mt-4">Entrepreneur | Innovator | Tech Enthusiast | Startup Founder</p>
+            <p class="text-lg text-gray-300 mt-2">"Building the future, one project at a time."</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 parallax" style="background-image: url('about-bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-gray-800 dark:text-gray-100 mb-12 text-center fade-in">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12">
+                <div class="flex-shrink-0">
+                    <img src="ss.jpeg" alt="Profile Picture" class="w-64 h-64 rounded-full shadow-lg hover:scale-105 transition-transform">
+                </div>
+                <div class="mt-8 md:mt-0 text-gray-700 dark:text-gray-300">
+                    <p class="text-lg leading-relaxed">
+                        <span class="font-semibold text-gray-900 dark:text-gray-100">I am a BTech Student</span> at Muthoot M George Institute of Technology, specializing in Computer Science and Engineering.
+                    </p>
+                    <p class="text-lg leading-relaxed mt-4">
+                        <span class="font-semibold text-gray-900 dark:text-gray-100">Academic Excellence:</span> I am currently in my first year and have achieved an impressive CGPA of 9.42, showcasing my dedication to academic success.
+                    </p>
+                    <p class="text-lg leading-relaxed mt-4">
+                        <span class="font-semibold text-gray-900 dark:text-gray-100">Professional Interests:</span> I am passionate about coding, entrepreneurship, and innovation. I actively seek opportunities to apply my technical skills in real-world scenarios. I am enthusiastic about participating in initiatives that foster technological advancement and community engagement.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Explore My Projects</a>
+                        <a href="resume.pdf" target="_blank" class="ml-4 bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Startup Ventures & Projects Section -->
+    <section id="projects" class="py-16 bg-white dark:bg-gray-800 parallax" style="background-image: url('projects-bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center fade-in">Startup Ventures & Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Cards -->
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale cursor-pointer" onclick="showPopup('HoloLearn', 'AI-driven immersive education platform revolutionizing learning through holographic interfaces and gesture-based interactions.', 'AI, Unity, Leap Motion', 'Developed an AI-powered educational infrastructure and led a team of developers and marketers.')">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">HoloLearn</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">AI-driven immersive education platform...</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale cursor-pointer" onclick="showPopup('Local Ease', 'AI-powered business analytics and market intelligence platform for local businesses.', 'AI, Data Analytics', 'Managed a 7-member team under MuRe Tech and pitched at the National Entrepreneurship Conclave.')">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Local Ease</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">AI-powered business analytics platform...</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale cursor-pointer" onclick="showPopup('SkillFi', 'AI-powered platform combining learning and earning opportunities for users.', 'AI, Gamification', 'Designed gamified learning experiences and drove user engagement through innovative marketing strategies.')">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">SkillFi</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">AI-powered platform combining learning...</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale cursor-pointer" onclick="showPopup('BharatGrid', 'Visionary initiative to position India as a global leader in poverty eradication, passion-driven employment, and universal literacy.', 'AI, Data Systems', 'Built a detailed concept note, one-page summary, and cover letter for submission to the PMO/NITI Aayog.')">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">BharatGrid</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Visionary initiative for India...</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale cursor-pointer" onclick="showPopup('AgroSage', 'AI-powered platform for crop intelligence and farmer support.', 'AI, Data Analytics', 'Developed the core idea and strategic vision for improving farmer access to timely crop insights and market trends.')">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">AgroSage</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">AI-powered platform for crop intelligence...</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale cursor-pointer" onclick="showPopup('Aquaverse', 'AI-powered cognitive aquaculture system using bio-sensors and underwater smart devices to optimize fish health, behavior, and environment.', 'AI, IoT, Smart Sensors', 'Developed the brand and product vision, integrated device and platform under one system, and prepared for submission to the Fisheries Startup Grand Challenge 2.0.')">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Aquaverse</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">AI-powered cognitive aquaculture system...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="projectPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-lg w-full relative">
+                <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-300" onclick="closePopup()">✖</button>
+                <h3 id="popupTitle" class="text-2xl font-bold text-gray-800 dark:text-gray-100"></h3>
+                <p id="popupDescription" class="text-gray-700 dark:text-gray-300 mt-4"></p>
+                <p id="popupTechnologies" class="text-gray-700 dark:text-gray-300 mt-4"><strong>Technologies:</strong> </p>
+                <p id="popupAchievements" class="text-gray-700 dark:text-gray-300 mt-4"><strong>Achievements:</strong> </p>
+            </div>
+        </div>
+
+        <script>
+            function showPopup(title, description, technologies, achievements) {
+                document.getElementById('popupTitle').textContent = title;
+                document.getElementById('popupDescription').textContent = description;
+                document.getElementById('popupTechnologies').innerHTML = `<strong>Technologies:</strong> ${technologies}`;
+                document.getElementById('popupAchievements').innerHTML = `<strong>Achievements:</strong> ${achievements}`;
+                document.getElementById('projectPopup').classList.remove('hidden');
+            }
+
+            function closePopup() {
+                document.getElementById('projectPopup').classList.add('hidden');
+            }
+        </script>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 parallax" style="background-image: url('education-bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-12 text-center fade-in">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Muthoot M George Institute of Technology</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        <strong>Degree:</strong> BTech in Computer Science and Engineering<br>
+                        <strong>Year:</strong> 2024–Present<br>
+                        <strong>Achievements:</strong> CGPA of 9.42
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Chinmaya Vidyalaya Vaduthala</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        <strong>Level:</strong> Higher Secondary Education<br>
+                        <strong>10th Grade:</strong> Scored 95.40%<br>
+                        <strong>12th Grade:</strong> Scored 92.20%
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 bg-white dark:bg-gray-800 parallax" style="background-image: url('achievements-bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-12 text-center fade-in">Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Limit Breakers Category Topper -->
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Limit Breakers Category Topper</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        I was awarded by St. Teresa's College, Ernakulam in January 2024 for exceptional performance in a Mathematics quiz. This achievement reflects my strong analytical abilities, problem-solving skills, and dedication to academic excellence. I was associated with Chinmaya Vidyalaya during this accomplishment.
+                    </p>
+                </div>
+                <!-- HubSpot Inbound Sales Certification -->
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Inbound Sales Certification</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        I earned this certification from <a href="https://app-na2.hubspot.com/academy/achievements/mb1s7fbl/en/1/soorya-narayan-m/inbound-sales" target="_blank" class="text-blue-500 hover:underline">HubSpot Academy</a>, certified from February 2025 to March 2027. I demonstrated expertise in the Inbound Sales Methodology, including identifying, connecting, exploring, and advising potential buyers. This certification showcases my strong sales acumen and strategic customer engagement skills.
+                    </p>
+                </div>
+                <!-- FutureSkills Prime Silver Certification -->
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">FutureSkills Prime Silver Certification</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                        My <a href="https://fsp-assessment-certificates.s3.ap-southeast-1.amazonaws.com/%27/s3/buckets/fsp-assessment-certificates%27/M%2BNarayan_145411969.pdf.pdf" target="_blank" class="text-blue-500 hover:underline">FutureSkills Prime Silver Certification</a> in Digital 101 (30 Hours), issued by NASSCOM and the Ministry of Electronics & IT, recognizes my proficiency in digital skills, with a 68% score, categorizing me in the Silver tier. It showcases my expertise in foundational digital competencies aligned with industry standards! 🚀
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 parallax" style="background-image: url('skills-bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-12 text-center fade-in">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Programming Languages</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Proficient in Python, C, and C++.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Python Development</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Experienced in building Python-based applications and scripts.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Project Management</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Skilled in managing projects and leading teams effectively.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Problem Solving</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Adept at analyzing and solving complex problems efficiently.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Team Collaboration</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Strong ability to collaborate and work effectively in teams.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Effective Communication</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Excellent verbal and written communication skills.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Entrepreneurial Mindset</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Innovative thinker with a passion for entrepreneurship.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Program Coordination</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Experienced in coordinating and managing programs effectively.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover-scale text-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Active Listening</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2">Highly skilled in active listening and understanding others' needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 parallax" style="background-image: url('contact-bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-500 dark:text-gray-300 mb-6 text-center fade-in">Contact Me</h2>
+            <form action="https://formspree.io/f/xzzrvdpz" method="POST" class="max-w-lg mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover-scale">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-800 dark:text-gray-200">Name</label> <!-- Fixed label color -->
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-800 dark:text-gray-200">Email</label> <!-- Fixed label color -->
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-800 dark:text-gray-200">Message</label> <!-- Fixed label color -->
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Send Message</button>
+                <p id="confirmationMessage" class="text-green-500 mt-4 hidden">Thank you for your message! I'll get back to you soon.</p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Show confirmation message after form submission
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent default form submission
+            const confirmationMessage = document.getElementById("confirmationMessage");
+            confirmationMessage.classList.remove("hidden");
+
+            // Simulate form submission to Formspree
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    Accept: "application/json",
+                },
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        confirmationMessage.textContent = "Thank you for your message! I'll get back to you soon.";
+                        form.reset(); // Clear the form
+                    } else {
+                        confirmationMessage.textContent = "Oops! There was a problem submitting your form.";
+                    }
+                })
+                .catch(() => {
+                    confirmationMessage.textContent = "Oops! There was a problem submitting your form.";
+                });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 M Soorya Narayan. Made with ❤️ by M Soorya Narayan.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/m-soorya-narayan-a1488a335/" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/sceniccoder" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.instagram.com/_sooryanarayan_/" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
